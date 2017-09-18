@@ -1,1 +1,3 @@
-h1 {color: red;}
+.navbar-dark .navbar-brand {
+    color: #31ec3a;
+}
