@@ -5,7 +5,10 @@
 {% if photo.image %}
 <div class="card">
 <img src='{{ photo.image.url }}' class='image-responsive' height="280" width="356"/>
-<p class="card-text">{{ photo.title }}</p>
+<a href="/del_photo/{{ photo.id }}">
+    <img src="static/img/del.png" style="width:20px; height:20px; position:absolute; top:0; right:0;" />
+</a>
+<p class="card-text">{{ photo.description }}</p>
 </div>
 {% endif %}
 {% endfor %}

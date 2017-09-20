@@ -3,7 +3,7 @@ from album.models import Photo
 
 # Register your models here.
 class PhotoAdmin(admin.ModelAdmin):
-    list_display = ['title','timestamp']
+    list_display = ['description','timestamp']
 
     class Meta:
         model = Photo

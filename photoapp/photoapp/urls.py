@@ -17,11 +17,13 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.conf.urls.static import static
 from django.conf import settings
-from album.views import HomeView
+from album.views import HomeView, AddPhotoView, DelPhotoView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', HomeView.as_view(), name="home"),
+    url(r'^add_photo', AddPhotoView.as_view(), name="add_photo"),
+    url(r'^del_photo/(?P<photo_id>(\d)+)', DelPhotoView.as_view()),
 ]
 
 if settings.DEBUG:

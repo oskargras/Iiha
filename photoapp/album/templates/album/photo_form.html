@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<figure class="col-sm-6">
+        <h2>Upload your photo</h2>
+        <form action="" method="post" enctype="multipart/form-data" class="photoform">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" class="btn btn-secondary" value="Save" />
+        </form>
+</figure>
+
+{% endblock %}
